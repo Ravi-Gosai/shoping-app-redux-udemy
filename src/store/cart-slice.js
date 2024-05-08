@@ -1,6 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit"
 
+//   fetch('https://shoping-http-req-default-rtdb.firebaseio.com/cart.json').then(res=>{
+//     return res.json()
+//   }).then(data=>{
+//     console.log(data)
+//   })
 
+// const initialState1 = await data.json
+// console.log(initialState1)
 const initialState = {
     items : [],
     totalQuantity : 0
@@ -12,7 +19,7 @@ const cartSlice = createSlice({
         addItemToCart(state,action){
             const newItem = action.payload;
             const existingItem = state.items.find((item)=>item.id === newItem.id)
-            console.log(existingItem)
+            // console.log(existingItem)
 
             state.totalQuantity++
             if(!existingItem){
