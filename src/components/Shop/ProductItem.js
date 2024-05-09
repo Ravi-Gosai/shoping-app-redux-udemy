@@ -9,7 +9,7 @@ const dispatch = useDispatch()
   const addCartHandler = ()=>{
 
     dispatch(cartAction.addItemToCart({
-      id,price,description
+      id,price,description,title
     }))
 
   }
